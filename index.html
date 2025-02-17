@@ -64,11 +64,30 @@ p { font-size: 1.2rem; text-align: center; }
     transition: transform 0.2s ease;
     text-decoration: none;
     display: inline-block;
+    width: 100%; /* Make all buttons full width */
+    max-width: 400px; /* Maximum width to maintain consistency */
+    margin: 20px auto; /* Center the button and add consistent spacing */
+    text-align: center;
+}
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+        .package-button {
+    position: relative;
+    bottom: 0; /* Align to bottom of card */
+    margin-top: auto; /* Push button to bottom of flex container */
+}
+
+/* Card container to ensure equal height */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure all cards are equal height */
+    padding: 40px 30px;
 }
 
 /* Section Styles */
