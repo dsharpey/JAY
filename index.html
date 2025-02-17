@@ -275,7 +275,105 @@ h1, h2, h3 {
     border-radius: 10px;
     background: var(--background-color);
 }
+        .pain-points, .discoveries {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+}
 
+.point {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.emoji {
+    font-size: 2rem;
+    min-width: 40px;
+}
+
+.point p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+        .package-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.package-benefits li {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.package-price {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.package-price p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.package-price h4 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.package-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.featured {
+    position: relative;
+    transform: scale(1.05);
+    border: 2px solid var(--accent-color);
+}
+
+.featured-tag {
+    position: absolute;
+    top: -15px;
+    right: 50%;
+    transform: translateX(50%);
+    background: var(--accent-color);
+    color: var(--background-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Update existing card styles */
+.card {
+    background: var(--primary-color);
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+        
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -318,6 +416,11 @@ h1, h2, h3 {
   </style>      
 </head>
 <body>
+<div style="text-align: center; padding: 20px;">
+    <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin: 0 auto; background: var(--primary-color); padding: 5px;">
+        <img src="https://i.ibb.co/TDBfJsDH/jaylogo-Photoroom.jpg" alt="SC Coaching Logo" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+</div>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -326,27 +429,105 @@ h1, h2, h3 {
             <button class="cta-button" id="openPopup">GET YOUR FREE TRANSFORMATION GUIDE</button>
         </div>
     </section>
-
-    <!-- Programs Section -->
-    <section class="info-section">
-        <div class="container">
-            <h2>Our Programs</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Basic</h3>
-                    <p>Our personal trainer service offers a comprehensive approach to losing weight. We provide tailored diet plans and workout regimens that are designed to help you reach your goals in a safe and effective manner.</p>
-                </div>
-                <div class="card">
-                    <h3>Advanced</h3>
-                    <p>Gain Muscle with a personalized fitness program designed to help you reach your goals. Our certified personal trainers will create a program tailored to your individual needs to help you maximize your strength and muscle gain.</p>
-                </div>
-                <div class="card">
-                    <h3>Premium</h3>
-                    <p>Get Shredded is the perfect program for those who want to take their fitness to the next level and get in the best shape of their lives. Our personal trainers will provide you with an all-encompassing fitness program.</p>
-                </div>
+        <section class="info-section">
+    <div class="container">
+        <h2>If You're Tired Of...</h2>
+        <div class="pain-points">
+            <div class="point">
+                <span class="emoji">😫</span>
+                <p>Wasting time and energy on workout programs that don't deliver results</p>
+            </div>
+            <div class="point">
+                <span class="emoji">😤</span>
+                <p>Feeling frustrated with inconsistent progress and motivation</p>
+            </div>
+            <div class="point">
+                <span class="emoji">😔</span>
+                <p>Struggling alone without expert guidance and accountability</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="container">
+        <h2>In This Guide You'll Discover...</h2>
+        <div class="discoveries">
+            <div class="point">
+                <span class="emoji">🎯</span>
+                <p>A proven system to transform your physique with clear, achievable steps</p>
+            </div>
+            <div class="point">
+                <span class="emoji">💪</span>
+                <p>Expert strategies to build lean muscle and burn fat effectively</p>
+            </div>
+            <div class="point">
+                <span class="emoji">🔑</span>
+                <p>The secret to maintaining motivation and consistency long-term</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Programs Section -->
+    <!-- Programs Section -->
+<section class="info-section">
+    <div class="container">
+        <h2>Training Packages</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>BASIC</h3>
+                <ul class="package-benefits">
+                    <li>✓ Personalized workout program</li>
+                    <li>✓ Basic nutrition guidance</li>
+                    <li>✓ Monthly check-ins</li>
+                    <li>✓ Progress tracking tools</li>
+                    <li>✓ Access to exercise library</li>
+                </ul>
+                <div class="package-price">
+                    <p>Starting from</p>
+                    <h4>£XX/month</h4>
+                </div>
+                <a href="#goals-basic" class="cta-button package-button">GET STARTED - BASIC</a>
+            </div>
+
+            <div class="card featured">
+                <div class="featured-tag">MOST POPULAR</div>
+                <h3>ADVANCED</h3>
+                <ul class="package-benefits">
+                    <li>✓ Everything in Basic plus:</li>
+                    <li>✓ Weekly check-ins</li>
+                    <li>✓ Customized meal planning</li>
+                    <li>✓ Form check videos</li>
+                    <li>✓ Priority support</li>
+                    <li>✓ Supplement guidance</li>
+                </ul>
+                <div class="package-price">
+                    <p>Starting from</p>
+                    <h4>£XX/month</h4>
+                </div>
+                <a href="#goals-advanced" class="cta-button package-button">GET STARTED - ADVANCED</a>
+            </div>
+
+            <div class="card">
+                <h3>PREMIUM</h3>
+                <ul class="package-benefits">
+                    <li>✓ Everything in Advanced plus:</li>
+                    <li>✓ Daily communication</li>
+                    <li>✓ 24/7 WhatsApp support</li>
+                    <li>✓ Live training sessions</li>
+                    <li>✓ Advanced body composition analysis</li>
+                    <li>✓ Lifestyle coaching</li>
+                </ul>
+                <div class="package-price">
+                    <p>Starting from</p>
+                    <h4>£XX/month</h4>
+                </div>
+                <a href="#goals-premium" class="cta-button package-button">GET STARTED - PREMIUM</a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- About Coach Section -->
     <section class="about-section">
