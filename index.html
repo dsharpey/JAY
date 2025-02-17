@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC Coaching | Transform Your Physique</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #ffffff;
+            --accent-color: #000000;
+            --background-color: #f5f5f5;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: var(--primary-color);
+            margin: 20px;
+        }
+
+        .hero h1 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-color);
+        }
+
+        /* Button Styles */
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Info Sections */
+        .info-section {
+            padding: 60px 40px;
+            background: var(--primary-color);
+            margin: 20px;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .info-section p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        /* Card Sections */
+        .card-section {
+            padding: 60px 40px;
+            background: var(--primary-color);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--primary-color);
+            padding: 30px;
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            background: var(--primary-color);
+            margin: 20px;
+            text-align: center;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: var(--primary-color);
+            margin: 20px;
+        }
+
+        .contact-heading {
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: var(--primary-color);
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--accent-color);
+        }
+
+        /* Form Styles */
+        .email-form input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .info-section, 
+            .about-section, 
+            .contact-section {
+                padding: 40px 20px;
+                margin: 10px;
+            }
+
+            .popup-content {
+                padding: 30px 20px;
+                margin: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>WE TRANSFORM PEOPLE'S PHYSIQUES AND LIVES</h1>
+            <p>Expert online coaching tailored to your lifestyle and fitness goals.</p>
+            <button class="cta-button" id="openPopup">GET YOUR FREE TRANSFORMATION GUIDE</button>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Lose Weight</h3>
+                    <p>Our personal trainer service offers a comprehensive approach to losing weight. We provide tailored diet plans and workout regimens that are designed to help you reach your goals in a safe and effective manner.</p>
+                </div>
+                <div class="card">
+                    <h3>Gain Muscle</h3>
+                    <p>Gain Muscle with a personalized fitness program designed to help you reach your goals. Our certified personal trainers will create a program tailored to your individual needs to help you maximize your strength and muscle gain.</p>
+                </div>
+                <div class="card">
+                    <h3>Get Shredded</h3>
+                    <p>Get Shredded is the perfect program for those who want to take their fitness to the next level and get in the best shape of their lives. Our personal trainers will provide you with an all-encompassing fitness program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Coach Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>COACH JAY</h2>
+            <div class="about-content">
+                <p>As an online personal coach based in the UK, I specialise in helping both males and females achieve body confidence. My bespoke online personal training and nutrition plans are tailored to an individual's lifestyle and fitness goals.</p>
+                <p>With five years of gym training experience, I understand the challenges of balancing healthy habits with the demands of everyday life.</p>
+                <p>Whether you're looking to lose weight, build muscle, or simply improve your overall health and wellbeing, I can help. My online coaching services are designed to be flexible and convenient, so you can work out and eat well no matter where you are.</p>
+            </div>
+            <button class="cta-button">DISCUSS YOUR GOALS</button>
+        </div>
+    </section>
+
+    <!-- Transformation Guide Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>TRANSFORMATION GUIDE</h2>
+            <p>Take the first step towards your fitness goals</p>
+            <button class="cta-button" id="openPopupGuide">Download Free Guide</button>
+        </div>
+    </section>
+
+    <!-- Popup Form -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h2>Get Your Free Transformation Guide</h2>
+            <form id="transformationForm" class="email-form">
+                <input 
+                    type="text" 
+                    name="firstName" 
+                    placeholder="First Name" 
+                    required 
+                >
+                <input 
+                    type="text" 
+                    name="lastName" 
+                    placeholder="Last Name" 
+                    required 
+                >
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    required 
+                >
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    placeholder="Phone" 
+                    required 
+                >
+                <button type="submit" class="cta-button">Download Free Guide</button>
+            </form>
+            <p style="margin-top: 20px; font-size: 0.8em;">After submitting, you'll receive instant access to your free guide</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 20px 0; background: var(--primary-color);">
+        <div class="container">
+            <p>© 2024 SC Coaching. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Popup functionality
+        const popup = document.getElementById('popup');
+        const openPopupBtn = document.getElementById('openPopup');
+        const openPopupGuideBtn = document.getElementById('openPopupGuide');
+        const closePopupBtn = document.getElementById('closePopup');
+
+        function openPopup() {
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        openPopupBtn.addEventListener('click', openPopup);
+        openPopupGuideBtn.addEventListener('click', openPopup);
+        closePopupBtn.addEventListener('click', closePopup);
+
+        // Close popup when clicking outside
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+
+        // Form submission
+        document.getElementById('transformationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically add your form submission logic
+            // For example, sending to a server or email service
+            
+            // Simulate successful submission
+            alert('Thank you! Your guide will be sent to your email shortly.');
+            closePopup();
+            
+            // Optional: Reset form
+            this.reset();
+        });
+
+        // Escape key to close popup
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && popup.style.display === 'flex') {
+                closePopup();
+            }
+        });
+    </script>
+</body>
+</html>
