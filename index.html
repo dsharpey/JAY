@@ -165,6 +165,7 @@ section {
     margin-top: 1rem;
 }
         /* Container Styles */
+/* Container Styles */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -182,6 +183,52 @@ section {
     margin: 2rem 0;
 }
 
+/* Pain Points */
+.pain-points ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pain-points li {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Community & Offer Lists */
+.community ul,
+.offer ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.community li,
+.offer li {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    height: 100%; /* Ensures equal height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .pain-points ul,
+    .community ul,
+    .offer ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 /* Responsive Design */
 @media (max-width: 768px) {
