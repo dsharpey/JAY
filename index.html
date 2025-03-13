@@ -113,7 +113,7 @@ body {
 }
 
 .video-container {
-    max-width: 500px; /* Changed from 1000px to 500px */
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
     aspect-ratio: 16/9;
@@ -190,13 +190,15 @@ body {
 .about {
     width: 100%;
     background: var(--secondary-color);
+    padding: 2rem 0;
 }
 
 .full-width-image {
-    width: 25%; /* Changed from 100% to 25% */
+    width: 25%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centers the image */
+    margin: 0 auto;
+} /* Fixed missing closing bracket */
 
 .about-content {
     max-width: 800px;
@@ -237,6 +239,7 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease;
     border: 1px solid rgba(255,255,255,0.1);
+    width: 100%; /* Added for full width */
 }
 
 .faq-item:hover {
@@ -305,5 +308,9 @@ body {
     
     .about-text {
         font-size: 1.1rem;
+    }
+    
+    .full-width-image {
+        width: 50%;
     }
 }
