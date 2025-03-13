@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Your Life | Ty's Brotherhood</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-<!-- Video Section -->
-<section class="video-section">
-    <div class="video-container">
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/jPqy5bl-QII?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=jPqy5bl-QII&modestbranding=1" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen
-        ></iframe>
-    </div>
-</section>
-    <div class="hero-content">
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/jPqy5bl-QII?controls=1&showinfo=0&rel=0&autoplay=1&loop=1&playlist=jPqy5bl-QII&modestbranding=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+            ></iframe>
         </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
             <h1>TRANSFORM YOUR LIFE THROUGH RAW, UNCUT TRUTH</h1>
             <h2>For Men Ready To Take Life Personal And Become Unstoppable</h2>
@@ -30,7 +29,7 @@
         </div>
     </section>
 
-    <!-- Pain Points with Icons -->
+    <!-- Pain Points -->
     <section class="pain-points">
         <div class="container">
             <div class="point-card">
@@ -48,32 +47,27 @@
         </div>
     </section>
 
-    <!-- About Section with Image -->
-<section class="about">
-    <div class="container">
-        <div class="about-image">
-            <img src="https://i.ibb.co/qLKGTtgr/Screenshot-2025-03-11-092306-Photoroom.png" alt="Ty">
-        </div>
+    <!-- About Section -->
+    <section class="about">
+        <img src="https://i.ibb.co/qLKGTtgr/Screenshot-2025-03-11-092306-Photoroom.png" alt="Ty" class="full-width-image">
         <div class="about-content">
             <p class="about-text">
                 Listen here - I'm not here to give you some fairy tale story. I went from sleeping on the floor to building an empire because I took life personal. Everything I teach, I lived through first. My philosophy is simple: be demanding with your life and unleash that beast within you. I don't do therapy, I don't do excuses, and I definitely don't do sugar-coating. If you're ready for that raw, unfiltered truth about becoming unstoppable - you're in the right place. Just real results for men who are serious about leveling up. The question is: are you ready to take it personal?
             </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ Section -->
-<section class="faq">
-    <div class="container">
+    <!-- FAQ Section -->
+    <section class="faq">
         <h2>Common Questions</h2>
-        <div class="faq-grid">
+        <div class="faq-list">
             <div class="faq-item">
                 <h3>How is this different?</h3>
                 <p>This ain't your typical feel-good community. We demand results. No excuses, no games, just real transformation for men ready to work.</p>
             </div>
             <div class="faq-item">
                 <h3>Do I need experience?</h3>
-                <p>You need the hunger to grow. Everything else, we build from ground up.</p>
+                <p>You need the hunger to grow. Everything else, we build from ground zero.</p>
             </div>
             <div class="faq-item">
                 <h3>How much time needed?</h3>
@@ -84,8 +78,9 @@
                 <p>Yes, but real ones never quit when it gets tough.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</body>
+</html>
 
 <style>
 :root {
@@ -110,42 +105,67 @@ body {
     line-height: 1.6;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Video Section */
+.video-section {
+    width: 100%;
+    padding: 50px 0;
+    background: var(--background-color);
 }
 
-.video-background {
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    opacity: 0.3;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px 0;
+    text-align: center;
+    background: var(--background-color);
 }
 
 .hero-content {
-    text-align: center;
-    padding: 2rem;
     max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero h1 {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-color);
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
 }
 
 /* Pain Points */
+.pain-points .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .point-card {
     background: var(--secondary-color);
     padding: 2rem;
@@ -166,14 +186,73 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Container Layout */
-.container {
+/* About Section */
+.about {
+    width: 100%;
+    background: var(--secondary-color);
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* FAQ Section */
+.faq {
+    padding: 4rem 0;
+    background: var(--background-color);
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.faq-list {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background: var(--secondary-color);
     padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.faq-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.faq-item p {
+    color: var(--text-color);
+    font-size: 1.1rem;
 }
 
 /* CTA Button */
@@ -196,177 +275,9 @@ body {
     box-shadow: 0 10px 20px rgba(140,42,42,0.3);
 }
 
-/* About Section */
-.about {
-    padding: 4rem 0;
-    background: var(--secondary-color);
-}
-
-.about .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    gap: 2rem;
-}
-
-.about-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--accent-color);
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-content {
-    text-align: center;
-    max-width: 800px;
-}
-
-.about-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--text-color);
-}
-
-/* FAQ Section */
-.faq {
-    padding: 4rem 0;
-    background: var(--background-color);
-}
-
-.faq .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.faq h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    color: var(--accent-color);
-}
-
-.faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.faq-item {
-    background: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.faq-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-}
-
-.faq-item h3 {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.faq-item p {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .faq .container {
-        padding: 0 15px;
-    }
-    
-    .faq-item {
-        padding: 1.5rem;
-    }
-}
-
-.video-section {
-    width: 100%;
-    padding: 50px 0;
-    background: var(--background-color);
-}
-
-.video-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    aspect-ratio: 16/9;
-    position: relative;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px; /* Optional: adds rounded corners */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Optional: adds shadow */
-}
-
-.hero {
-    padding: 50px 0;
-    text-align: center;
-    background: var(--background-color);
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .video-container {
-        margin: 0 10px;
-    }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-image {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .about-text {
-        font-size: 1.1rem;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease forwards;
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
-    .container {
+    .pain-points .container {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -376,7 +287,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container {
+    .pain-points .container {
         grid-template-columns: 1fr;
     }
     
@@ -384,8 +295,15 @@ body {
         font-size: 2.5rem;
     }
     
-    .about .container {
-        grid-template-columns: 1fr;
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+    
+    .video-container {
+        margin: 0 10px;
+    }
+    
+    .about-text {
+        font-size: 1.1rem;
     }
 }
-</style>
