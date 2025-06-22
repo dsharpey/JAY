@@ -109,6 +109,7 @@
 
 <style>
 :root {
+:root {
     --primary-color: #0a0a0a;
     --accent-color: #8c2a2a;
     --background-color: #000000;
@@ -181,7 +182,7 @@ body {
     color: var(--text-color);
 }
 
-/* Pain Points */
+/* Pain Points - Keep 3 columns on all devices */
 .pain-points .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -223,7 +224,7 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
-} /* Fixed missing closing bracket */
+}
 
 .about-content {
     max-width: 1100px;
@@ -264,7 +265,7 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease;
     border: 1px solid rgba(255,255,255,0.1);
-    width: 100%; /* Added for full width */
+    width: 100%;
 }
 
 .faq-item:hover {
@@ -303,7 +304,7 @@ body {
     box-shadow: 0 10px 20px rgba(140,42,42,0.3);
 }
 
-    /* Footer Styles */
+/* Footer Styles */
 .footer {
     background: var(--secondary-color);
     padding: 3rem 0;
@@ -361,55 +362,73 @@ body {
     font-size: 0.8rem;
 }
 
-/* Responsive Design */
+/* Mobile Responsive - Scale down but keep same layout */
 @media (max-width: 768px) {
-    .footer {
-        padding: 2rem 0;
-    }
-
-    .social-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .social-link {
-        justify-content: center;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .pain-points .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
+    /* Scale down fonts proportionally */
     .hero h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .pain-points .container {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Scaled down from 4rem */
     }
     
     .hero h2 {
-        font-size: 1.4rem;
+        font-size: 1.3rem; /* Scaled down from 1.8rem */
     }
     
-    .video-container {
-        margin: 0 10px;
+    .faq h2 {
+        font-size: 2rem; /* Scaled down from 2.5rem */
     }
     
+    /* Keep 3 columns but with smaller gaps and padding */
+    .pain-points .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem; /* Reduced from 2rem */
+        padding: 1rem; /* Reduced from 2rem */
+    }
+    
+    .point-card {
+        padding: 1.5rem; /* Reduced from 2rem */
+    }
+    
+    .point-card i {
+        font-size: 2rem; /* Reduced from 2.5rem */
+    }
+    
+    .point-card h3 {
+        font-size: 0.9rem; /* Smaller text for mobile */
+    }
+    
+    /* Scale down other elements */
     .about-text {
-        font-size: 1.1rem;
+        font-size: 1rem; /* Reduced from 1.2rem */
     }
     
+    .faq-item {
+        padding: 1.5rem; /* Reduced from 2rem */
+    }
+    
+    .faq-item h3 {
+        font-size: 1.1rem; /* Reduced from 1.3rem */
+    }
+    
+    .faq-item p {
+        font-size: 1rem; /* Reduced from 1.1rem */
+    }
+    
+    .cta-button {
+        padding: 1rem 2rem; /* Reduced from 1.2rem 3rem */
+        font-size: 1rem; /* Reduced from 1.2rem */
+    }
+    
+    /* Keep image proportional */
     .full-width-image {
-        width: 50%;
+        width: 40%; /* Slightly larger on mobile for visibility */
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        padding: 2rem 0;
+    }
+    
+    .social-links {
+        gap: 1.5rem; /* Reduced from 2rem */
     }
 }
