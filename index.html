@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Your Life | Ty's Brotherhood</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <meta name="viewport" content="width=1200, initial-scale=0.3, user-scalable=yes">
+    
 </head>
 <body>
     <!-- Video Section -->
@@ -385,6 +388,19 @@ body {
     
     .hero h1 {
         font-size: 3rem;
+    }
+}
+
+    @media screen and (max-width: 768px) {
+    html {
+        zoom: 0.4; /* Scale everything down to fit */
+    }
+    
+    /* Or use transform for better browser support */
+    body {
+        transform: scale(0.4);
+        transform-origin: top left;
+        width: 250%; /* Compensate for scaling */
     }
 }
 
